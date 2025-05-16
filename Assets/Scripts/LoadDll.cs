@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using UnityEngine;
 using YooAsset;
-
+using Cysharp.Threading.Tasks;
 /// <summary>
 /// 脚本工作流程：
 /// 1.下载资源，用yooAsset资源框架进行下载
@@ -24,14 +24,15 @@ public class LoadDll : MonoBehaviour
 
     private ResourcePackage _defaultPackage;
 
-    void Start()
+    private async void  Start()
     {
-        StartCoroutine(InitYooAssets(StartGame));
+        //StartCoroutine(InitYooAssets(StartGame));
+        await InitYooAssets(StartGame);
     }
 
     #region YooAsset初始化
 
-    IEnumerator InitYooAssets(Action onDownloadComplete)
+    private async UniTask InitYooAssets(Action onDownloadComplete)
     {
         // 1.初始化资源系统
         YooAssets.Initialize();
@@ -42,22 +43,48 @@ public class LoadDll : MonoBehaviour
         //===================================适应新版本YooAsset插件的修改===================================
         if (PlayMode == EPlayMode.EditorSimulateMode)
         {   
-            
             // 编辑器模拟模式
             var createParameters = new OfflinePlayModeParameters();
+            createParameters.BuildinFileSystemParameters = FileSystemParameters.CreateDefaultBuildinFileSystemParameters();        
             initializationOperation = package.InitializeAsync(createParameters);
+            await initializationOperation;
+            if (initializationOperation == null)
+            {
+                Debug.LogError("初始化操作创建失败！");
+                return;
+            }
         }
         else if (PlayMode == EPlayMode.HostPlayMode)
         { 
             //联机运行模式
             string defaultHostServer = GetHostServerURL();
             string fallbackHostServer = GetHostServerURL();
+            if (string.IsNullOrEmpty(defaultHostServer) || string.IsNullOrEmpty(fallbackHostServer))
+            {
+                Debug.LogError("服务器地址配置错误！");
+                return;
+            }
             IRemoteServices remoteServices = new RemoteServices(defaultHostServer, fallbackHostServer);
             var createParameters = new HostPlayModeParameters { BuildinFileSystemParameters = FileSystemParameters.CreateDefaultBuildinFileSystemParameters(), CacheFileSystemParameters = FileSystemParameters.CreateDefaultCacheFileSystemParameters(remoteServices) };
             initializationOperation = package.InitializeAsync(createParameters);
+            await initializationOperation;
+            if (initializationOperation == null)
+            {
+                Debug.LogError("初始化操作创建失败！");
+                return;
+            }
+        }
+        else
+        {
+            Debug.LogError($"不支持的运行模式：{PlayMode}");
+            return;
         }
 
-        yield return initializationOperation;
+        if (initializationOperation == null)
+        {
+            Debug.LogError("初始化操作为空！");
+            return;
+        }
         //===================================适应新版本YooAsset插件的修改===================================
             
         if (initializationOperation.Status == EOperationStatus.Succeed)
@@ -67,17 +94,18 @@ public class LoadDll : MonoBehaviour
         else
         {
             Debug.LogError($"资源包初始化失败：{initializationOperation.Error}");
+            return;
         }
 
         //2.获取资源版本
         var operation = package.RequestPackageVersionAsync();
-        yield return operation;
+        await operation;
 
         if (operation.Status != EOperationStatus.Succeed)
         {
             //更新失败
             Debug.LogError(operation.Error);
-            yield break;
+            return;
         }
 
         string packageVersion = operation.PackageVersion;
@@ -87,24 +115,24 @@ public class LoadDll : MonoBehaviour
         // 更新成功后自动保存版本号，作为下次初始化的版本。
         // 也可以通过operation.SavePackageVersion()方法保存。
         var operation2 = package.UpdatePackageManifestAsync(packageVersion);
-        yield return operation2;
+        await operation2;
 
         if (operation2.Status != EOperationStatus.Succeed)
         {
             //更新失败
             Debug.LogError(operation2.Error);
-            yield break;
+            return;
         }
 
         //4.下载补丁包
-        yield return Download();
+        await Download();
 
         //判断是否下载成功
         var assets = new List<string> { "HotUpdate.dll" }.Concat(AOTMetaAssemblyFiles);
         foreach (var asset in assets)
         {
             var handle = package.LoadAssetAsync<TextAsset>(asset);
-            yield return handle;
+            await handle;
             var assetObj = handle.AssetObject as TextAsset;
             s_assetDatas[asset] = assetObj;
             Debug.Log($"dll:{asset}   {assetObj == null}");
@@ -167,7 +195,7 @@ public class LoadDll : MonoBehaviour
 
     #region 下载热更资源
 
-    IEnumerator Download()
+    private async UniTask Download()
     {
         int downloadingMaxNum = 10;
         int failedTryAgain = 3;
@@ -177,7 +205,7 @@ public class LoadDll : MonoBehaviour
         //没有需要下载的资源
         if (downloader.TotalDownloadCount == 0)
         {
-            yield break;
+            return;
         }
 
         //需要下载的文件总数和总大小
@@ -194,7 +222,7 @@ public class LoadDll : MonoBehaviour
 
         //开启下载
         downloader.BeginDownload();
-        yield return downloader;
+        await downloader;
 
         //检测下载结果
         if (downloader.Status == EOperationStatus.Succeed)
@@ -299,15 +327,15 @@ public class LoadDll : MonoBehaviour
         _hotUpdateAss = System.AppDomain.CurrentDomain.GetAssemblies().First(a => a.GetName().Name == "HotUpdate");
 #endif
         Debug.Log("运行热更代码");
-        StartCoroutine(Run_InstantiateComponentByAsset());
+        Run_InstantiateComponentByAsset().Forget();
     }
 
-    IEnumerator Run_InstantiateComponentByAsset()
+    private async UniTask Run_InstantiateComponentByAsset()
     {
         // 通过实例化assetbundle中的资源，还原资源上的热更新脚本
         var package = YooAssets.GetPackage("DefaultPackage");
-        var handle = package.LoadAssetAsync<GameObject>("Cube");
-        yield return handle;
+        var handle = package.LoadAssetAsync<GameObject>("GameLoadDll");
+        await handle;
         handle.Completed += Handle_Completed;
     }
 
