@@ -9,6 +9,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+/StreamingAssets/
 *.log
 
 # MemoryCaptures can get excessive in size.
