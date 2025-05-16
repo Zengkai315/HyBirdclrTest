@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 791000620
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8bf2a5803c71246e7ebb1de9a7558fa6
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e84574e0f9f3b9f85f681c096f9c99d5
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 8bf2a5803c71246e7ebb1de9a7558fa6
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 313a7b1234d9efe40b19b2e4ed8664a3, type: 3}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/HotUpdateAssets/Perfabs/GameLoadDll.prefab
+Dependencies: []

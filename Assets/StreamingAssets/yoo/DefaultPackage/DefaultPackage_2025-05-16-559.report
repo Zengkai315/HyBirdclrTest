@@ -1,0 +1,99 @@
+{
+    "Summary": {
+        "YooVersion": "2.3.9",
+        "UnityVersion": "2021.3.37f1",
+        "BuildDate": "2025/5/16 9:19:12",
+        "BuildSeconds": 0,
+        "BuildTarget": 13,
+        "BuildPipeline": "BuiltinBuildPipeline",
+        "BuildBundleType": 2,
+        "BuildPackageName": "DefaultPackage",
+        "BuildPackageVersion": "2025-05-16-559",
+        "BuildPackageNote": "2025/5/16 9:19:11",
+        "UniqueBundleName": false,
+        "EnableAddressable": true,
+        "LocationToLower": false,
+        "IncludeAssetGUID": false,
+        "AutoCollectShaders": true,
+        "IgnoreRuleName": "YooAsset.Editor.NormalIgnoreRule",
+        "ClearBuildCacheFiles": false,
+        "UseAssetDependencyDB": false,
+        "EnableSharePackRule": true,
+        "SingleReferencedPackAlone": true,
+        "EncryptionClassName": "null",
+        "FileNameStyle": 0,
+        "CompressOption": 2,
+        "DisableWriteTypeTree": false,
+        "IgnoreTypeTreeChanges": true,
+        "WriteLinkXML": true,
+        "CacheServerHost": "",
+        "CacheServerPort": 0,
+        "BuiltinShadersBundleName": "",
+        "MonoScriptsBundleName": "",
+        "AssetFileTotalCount": 2,
+        "MainAssetTotalCount": 2,
+        "AllBundleTotalCount": 2,
+        "AllBundleTotalSize": 4586,
+        "EncryptedBundleTotalCount": 0,
+        "EncryptedBundleTotalSize": 0
+    },
+    "AssetInfos": [
+        {
+            "Address": "HotUpdate.dll",
+            "AssetPath": "Assets/HotUpdateAssets/HotUpateCodes/HotUpdate.dll.bytes",
+            "AssetGUID": "85e1513d21aa5024bac8408572c63ca6",
+            "AssetTags": [],
+            "MainBundleName": "assets_hotupdateassets_hotupatecodes.bundle",
+            "MainBundleSize": 2752,
+            "DependAssets": [],
+            "DependBundles": []
+        },
+        {
+            "Address": "GameLoadDll",
+            "AssetPath": "Assets/HotUpdateAssets/Perfabs/GameLoadDll.prefab",
+            "AssetGUID": "a741732ad3a6718449c5b7939ecb7f6b",
+            "AssetTags": [],
+            "MainBundleName": "assets_hotupdateassets_perfabs.bundle",
+            "MainBundleSize": 1834,
+            "DependAssets": [],
+            "DependBundles": []
+        }
+    ],
+    "BundleInfos": [
+        {
+            "BundleName": "assets_hotupdateassets_hotupatecodes.bundle",
+            "FileName": "1bbbaee0cfd43ac213c1a5010dd1e998.bundle",
+            "FileHash": "1bbbaee0cfd43ac213c1a5010dd1e998",
+            "FileCRC": "78e497a5",
+            "FileSize": 2752,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundles": [],
+            "ReferenceBundles": [],
+            "BundleContents": [
+                {
+                    "AssetPath": "Assets/HotUpdateAssets/HotUpateCodes/HotUpdate.dll.bytes",
+                    "AssetGUID": "85e1513d21aa5024bac8408572c63ca6"
+                }
+            ]
+        },
+        {
+            "BundleName": "assets_hotupdateassets_perfabs.bundle",
+            "FileName": "8af3760a5748ce931b64697f465bdc63.bundle",
+            "FileHash": "8af3760a5748ce931b64697f465bdc63",
+            "FileCRC": "202f1bdc",
+            "FileSize": 1834,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundles": [],
+            "ReferenceBundles": [],
+            "BundleContents": [
+                {
+                    "AssetPath": "Assets/HotUpdateAssets/Perfabs/GameLoadDll.prefab",
+                    "AssetGUID": "a741732ad3a6718449c5b7939ecb7f6b"
+                }
+            ]
+        }
+    ],
+    "IndependAssets": []
+}
