@@ -1,0 +1,141 @@
+{
+    "Summary": {
+        "YooVersion": "2.3.9",
+        "UnityVersion": "2021.3.37f1",
+        "BuildDate": "2025/5/17 0:28:01",
+        "BuildSeconds": 2,
+        "BuildTarget": 13,
+        "BuildPipeline": "BuiltinBuildPipeline",
+        "BuildBundleType": 2,
+        "BuildPackageName": "DefaultPackage",
+        "BuildPackageVersion": "2025-05-17-27",
+        "BuildPackageNote": "2025/5/17 0:27:58",
+        "UniqueBundleName": false,
+        "EnableAddressable": true,
+        "LocationToLower": false,
+        "IncludeAssetGUID": false,
+        "AutoCollectShaders": true,
+        "IgnoreRuleName": "YooAsset.Editor.NormalIgnoreRule",
+        "ClearBuildCacheFiles": false,
+        "UseAssetDependencyDB": false,
+        "EnableSharePackRule": true,
+        "SingleReferencedPackAlone": true,
+        "EncryptionClassName": "null",
+        "FileNameStyle": 0,
+        "CompressOption": 2,
+        "DisableWriteTypeTree": false,
+        "IgnoreTypeTreeChanges": true,
+        "WriteLinkXML": true,
+        "CacheServerHost": "",
+        "CacheServerPort": 0,
+        "BuiltinShadersBundleName": "",
+        "MonoScriptsBundleName": "",
+        "AssetFileTotalCount": 5,
+        "MainAssetTotalCount": 5,
+        "AllBundleTotalCount": 2,
+        "AllBundleTotalSize": 990989,
+        "EncryptedBundleTotalCount": 0,
+        "EncryptedBundleTotalSize": 0
+    },
+    "AssetInfos": [
+        {
+            "Address": "HotUpdate.dll",
+            "AssetPath": "Assets/HotUpdateAssets/HotUpateCodes/HotUpdate.dll.bytes",
+            "AssetGUID": "85e1513d21aa5024bac8408572c63ca6",
+            "AssetTags": [],
+            "MainBundleName": "assets_hotupdateassets_hotupatecodes.bundle",
+            "MainBundleSize": 988655,
+            "DependAssets": [],
+            "DependBundles": []
+        },
+        {
+            "Address": "mscorlib.dll",
+            "AssetPath": "Assets/HotUpdateAssets/HotUpateCodes/mscorlib.dll.bytes",
+            "AssetGUID": "a2bc2109498b1624dad3a95382ff64b0",
+            "AssetTags": [],
+            "MainBundleName": "assets_hotupdateassets_hotupatecodes.bundle",
+            "MainBundleSize": 988655,
+            "DependAssets": [],
+            "DependBundles": []
+        },
+        {
+            "Address": "System.Core.dll",
+            "AssetPath": "Assets/HotUpdateAssets/HotUpateCodes/System.Core.dll.bytes",
+            "AssetGUID": "43135b5d2e0164540817dafbde823bd8",
+            "AssetTags": [],
+            "MainBundleName": "assets_hotupdateassets_hotupatecodes.bundle",
+            "MainBundleSize": 988655,
+            "DependAssets": [],
+            "DependBundles": []
+        },
+        {
+            "Address": "System.dll",
+            "AssetPath": "Assets/HotUpdateAssets/HotUpateCodes/System.dll.bytes",
+            "AssetGUID": "a4825b8b044952c4589678019f6b5027",
+            "AssetTags": [],
+            "MainBundleName": "assets_hotupdateassets_hotupatecodes.bundle",
+            "MainBundleSize": 988655,
+            "DependAssets": [],
+            "DependBundles": []
+        },
+        {
+            "Address": "GameLoadDll",
+            "AssetPath": "Assets/HotUpdateAssets/Perfabs/GameLoadDll.prefab",
+            "AssetGUID": "a741732ad3a6718449c5b7939ecb7f6b",
+            "AssetTags": [],
+            "MainBundleName": "assets_hotupdateassets_perfabs.bundle",
+            "MainBundleSize": 2334,
+            "DependAssets": [],
+            "DependBundles": []
+        }
+    ],
+    "BundleInfos": [
+        {
+            "BundleName": "assets_hotupdateassets_hotupatecodes.bundle",
+            "FileName": "d3176b9aa4d42f0418330384befc6547.bundle",
+            "FileHash": "d3176b9aa4d42f0418330384befc6547",
+            "FileCRC": "ebe69587",
+            "FileSize": 988655,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundles": [],
+            "ReferenceBundles": [],
+            "BundleContents": [
+                {
+                    "AssetPath": "Assets/HotUpdateAssets/HotUpateCodes/HotUpdate.dll.bytes",
+                    "AssetGUID": "85e1513d21aa5024bac8408572c63ca6"
+                },
+                {
+                    "AssetPath": "Assets/HotUpdateAssets/HotUpateCodes/mscorlib.dll.bytes",
+                    "AssetGUID": "a2bc2109498b1624dad3a95382ff64b0"
+                },
+                {
+                    "AssetPath": "Assets/HotUpdateAssets/HotUpateCodes/System.Core.dll.bytes",
+                    "AssetGUID": "43135b5d2e0164540817dafbde823bd8"
+                },
+                {
+                    "AssetPath": "Assets/HotUpdateAssets/HotUpateCodes/System.dll.bytes",
+                    "AssetGUID": "a4825b8b044952c4589678019f6b5027"
+                }
+            ]
+        },
+        {
+            "BundleName": "assets_hotupdateassets_perfabs.bundle",
+            "FileName": "44920eb609024eba5e90e399f8411fd9.bundle",
+            "FileHash": "44920eb609024eba5e90e399f8411fd9",
+            "FileCRC": "fae33447",
+            "FileSize": 2334,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundles": [],
+            "ReferenceBundles": [],
+            "BundleContents": [
+                {
+                    "AssetPath": "Assets/HotUpdateAssets/Perfabs/GameLoadDll.prefab",
+                    "AssetGUID": "a741732ad3a6718449c5b7939ecb7f6b"
+                }
+            ]
+        }
+    ],
+    "IndependAssets": []
+}

@@ -1,0 +1,15 @@
+{
+    "FileVersion": "1.0.0",
+    "PackageName": "DefaultPackage",
+    "PackageVersion": "2025-05-17-31",
+    "Wrappers": [
+        {
+            "BundleGUID": "44920eb609024eba5e90e399f8411fd9",
+            "FileName": "44920eb609024eba5e90e399f8411fd9.bundle"
+        },
+        {
+            "BundleGUID": "d3176b9aa4d42f0418330384befc6547",
+            "FileName": "d3176b9aa4d42f0418330384befc6547.bundle"
+        }
+    ]
+}

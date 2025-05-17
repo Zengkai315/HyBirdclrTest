@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 2858170359
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: assets_hotupdateassets_perfabs.bundle
+      Dependencies: {}
+    Info_1:
+      Name: assets_hotupdateassets_hotupatecodes.bundle
+      Dependencies: {}
