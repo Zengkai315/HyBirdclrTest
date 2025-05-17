@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 791000620
+CRC: 889038021
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8bf2a5803c71246e7ebb1de9a7558fa6
+    Hash: 6af8ff02b221bd133c3bd8c3a3616ab6
   TypeTreeHash:
     serializedVersion: 2
-    Hash: e84574e0f9f3b9f85f681c096f9c99d5
+    Hash: 1c87cfe06c81eca90c61600fe42e4c8c
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 8bf2a5803c71246e7ebb1de9a7558fa6
+    Hash: 6af8ff02b221bd133c3bd8c3a3616ab6
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -17,7 +17,9 @@ ClassTypes:
 - Class: 4
   Script: {instanceID: 0}
 - Class: 114
-  Script: {fileID: 11500000, guid: 313a7b1234d9efe40b19b2e4ed8664a3, type: 3}
+  Script: {fileID: 11500000, guid: 49ebc99a471bd094f9faeb34363a4265, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/HotUpdateAssets/Perfabs/GameLoadDll.prefab

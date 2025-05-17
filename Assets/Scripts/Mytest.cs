@@ -6,6 +6,11 @@ namespace TestHyBirdClr
 {
     public class Mytest : MonoBehaviour
     {
+
+        public static void TestHyBirdClr()
+        {
+            Debug.Log("我是MyTest类->TestHyBirdClr");
+        }
         // Start is called before the first frame update
         void Start()
         {   

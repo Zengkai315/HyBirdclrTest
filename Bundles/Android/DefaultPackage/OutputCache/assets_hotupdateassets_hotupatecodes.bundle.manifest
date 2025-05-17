@@ -1,20 +1,23 @@
 ManifestFileVersion: 0
-CRC: 2786158745
+CRC: 2442648429
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 125553f97088e71c9aab381c03ddc464
+    Hash: 1e7d6ff3507edc8e4d182d8225fde3bd
   TypeTreeHash:
     serializedVersion: 2
     Hash: 5ad585dd02dfb5016c0dad519eab8f49
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 125553f97088e71c9aab381c03ddc464
+    Hash: 1e7d6ff3507edc8e4d182d8225fde3bd
 HashAppended: 0
 ClassTypes:
 - Class: 49
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
+- Assets/HotUpdateAssets/HotUpateCodes/System.Core.dll.bytes
 - Assets/HotUpdateAssets/HotUpateCodes/HotUpdate.dll.bytes
+- Assets/HotUpdateAssets/HotUpateCodes/System.dll.bytes
+- Assets/HotUpdateAssets/HotUpateCodes/mscorlib.dll.bytes
 Dependencies: []
